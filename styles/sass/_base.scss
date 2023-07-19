@@ -1,0 +1,33 @@
+@use './mixins' as mix;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+* {
+	font: inherit;
+}
+
+html {
+	// 1 rem = 10px => 10px / 16px = 62.5%
+	@include mix.breakpoint(sm) {
+		font-size: 62.5%;
+	}
+
+	@include mix.breakpoint(md) {
+		font-size: 62.5%;
+	}
+}
+
+body {
+	main {
+		width: 100%;
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+	}
+}

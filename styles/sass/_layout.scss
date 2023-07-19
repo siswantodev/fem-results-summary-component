@@ -1,0 +1,192 @@
+@use './mixins' as mix;
+@use './variables' as var;
+
+section {
+	display: grid;
+
+	@include mix.breakpoint(md) {
+		max-width: 73.6rem;
+		grid-template-columns: 1fr 1fr;
+		border-radius: 3rem;
+		overflow: hidden;
+		box-shadow: 0.5rem 1rem 6rem rgba($color: var.$cobalt-blue, $alpha: 0.2);
+	}
+
+	.results {
+		padding: 4rem;
+		text-align: center;
+		border-radius: 0 0 3rem 3rem;
+		background: linear-gradient(
+			to bottom,
+			var.$light-slate-blue-background,
+			var.$light-royal-blue-background
+		);
+		color: var.$light-lavender;
+
+		@include mix.breakpoint(md) {
+			border-radius: 3rem;
+		}
+
+		&-title {
+			font-size: 2.4rem;
+			font-weight: 700;
+			margin-bottom: 3.8rem;
+		}
+
+		&-score {
+			margin-bottom: 3.8rem;
+			background: linear-gradient(
+				to bottom,
+				var.$violet-blue-circle,
+				var.$persian-blue-circle
+			);
+			width: 19.6rem;
+			border-radius: 50%;
+			aspect-ratio: 1 / 1;
+			margin-inline: auto;
+			display: grid;
+			place-content: center;
+
+			span {
+				font-size: 7.3rem;
+				font-weight: 800;
+				color: var.$white;
+			}
+		}
+
+		&-info {
+			width: 87%;
+			margin: 0 auto;
+
+			.rank {
+				font-size: 3.2rem;
+				font-weight: 700;
+				color: var.$white;
+				margin-bottom: 2.2rem;
+			}
+		}
+	}
+
+	.summary {
+		padding: 4rem;
+		width: 100%;
+
+		&-title {
+			font-size: 2.4rem;
+			font-weight: 700;
+			margin-bottom: 3.4rem;
+		}
+
+		&-info {
+			display: grid;
+			align-content: start;
+			gap: 1.6rem;
+			margin-bottom: 4rem;
+
+			.summary-item {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1.6rem 2rem;
+				border-radius: 1rem;
+				font-weight: 700;
+
+				&[data-color='color-1'] {
+					background-color: rgba($color: var.$light-red, $alpha: 0.05);
+
+					.description {
+						.icon {
+							stroke: var.$light-red;
+						}
+
+						.title {
+							color: var.$light-red;
+						}
+					}
+				}
+
+				&[data-color='color-2'] {
+					background-color: rgba($color: var.$orangey-yellow, $alpha: 0.05);
+
+					.description {
+						.icon {
+							stroke: var.$orangey-yellow;
+						}
+
+						.title {
+							color: var.$orangey-yellow;
+						}
+					}
+				}
+
+				&[data-color='color-3'] {
+					background-color: rgba($color: var.$green-teal, $alpha: 0.05);
+
+					.description {
+						.icon {
+							stroke: var.$green-teal;
+						}
+
+						.title {
+							color: var.$green-teal;
+						}
+					}
+				}
+
+				&[data-color='color-4'] {
+					background-color: rgba($color: var.$cobalt-blue, $alpha: 0.05);
+
+					.description {
+						.icon {
+							stroke: var.$cobalt-blue;
+						}
+
+						.title {
+							color: var.$cobalt-blue;
+						}
+					}
+				}
+
+				.description {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					flex-wrap: wrap;
+
+					.icon {
+						height: 2rem;
+						width: 2rem;
+					}
+				}
+
+				.score {
+					color: rgba($color: var.$dark-gray-blue, $alpha: 0.5);
+
+					span {
+						color: var.$dark-gray-blue;
+						margin-right: 0.6rem;
+					}
+				}
+			}
+		}
+
+		.button {
+			padding: 1.7rem 2rem;
+			border: none;
+			border-radius: 50rem;
+			background: var.$dark-gray-blue;
+			color: var.$white;
+			cursor: pointer;
+			min-width: 100%;
+
+			&:hover,
+			&:active {
+				background: linear-gradient(
+					var.$light-slate-blue-background,
+					var.$light-royal-blue-background
+				);
+				transition: background-color 0.2s ease-in-out;
+			}
+		}
+	}
+}

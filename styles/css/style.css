@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+}
+
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  font-display: swap;
+  font-weight: 500, 700, 800;
+  src: url("../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+body {
+  font-family: "HankenGrotesk", sans-serif;
+  color: hsl(224, 30%, 27%);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+section {
+  display: grid;
+}
+@media only screen and (min-width: 600px) {
+  section {
+    max-width: 73.6rem;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 3rem;
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem 6rem rgba(17, 37, 212, 0.2);
+  }
+}
+section .results {
+  padding: 4rem;
+  text-align: center;
+  border-radius: 0 0 3rem 3rem;
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(241, 100%, 89%);
+}
+@media only screen and (min-width: 600px) {
+  section .results {
+    border-radius: 3rem;
+  }
+}
+section .results-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3.8rem;
+}
+section .results-score {
+  margin-bottom: 3.8rem;
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  width: 19.6rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  display: grid;
+  place-content: center;
+}
+section .results-score span {
+  font-size: 7.3rem;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+}
+section .results-info {
+  width: 87%;
+  margin: 0 auto;
+}
+section .results-info .rank {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2.2rem;
+}
+section .summary {
+  padding: 4rem;
+  width: 100%;
+}
+section .summary-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3.4rem;
+}
+section .summary-info {
+  display: grid;
+  align-content: start;
+  gap: 1.6rem;
+  margin-bottom: 4rem;
+}
+section .summary-info .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+section .summary-info .summary-item[data-color=color-1] {
+  background-color: rgba(255, 87, 87, 0.05);
+}
+section .summary-info .summary-item[data-color=color-1] .description .icon {
+  stroke: hsl(0, 100%, 67%);
+}
+section .summary-info .summary-item[data-color=color-1] .description .title {
+  color: hsl(0, 100%, 67%);
+}
+section .summary-info .summary-item[data-color=color-2] {
+  background-color: rgba(255, 176, 31, 0.05);
+}
+section .summary-info .summary-item[data-color=color-2] .description .icon {
+  stroke: hsl(39, 100%, 56%);
+}
+section .summary-info .summary-item[data-color=color-2] .description .title {
+  color: hsl(39, 100%, 56%);
+}
+section .summary-info .summary-item[data-color=color-3] {
+  background-color: rgba(0, 189, 145, 0.05);
+}
+section .summary-info .summary-item[data-color=color-3] .description .icon {
+  stroke: hsl(166, 100%, 37%);
+}
+section .summary-info .summary-item[data-color=color-3] .description .title {
+  color: hsl(166, 100%, 37%);
+}
+section .summary-info .summary-item[data-color=color-4] {
+  background-color: rgba(17, 37, 212, 0.05);
+}
+section .summary-info .summary-item[data-color=color-4] .description .icon {
+  stroke: hsl(234, 85%, 45%);
+}
+section .summary-info .summary-item[data-color=color-4] .description .title {
+  color: hsl(234, 85%, 45%);
+}
+section .summary-info .summary-item .description {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+section .summary-info .summary-item .description .icon {
+  height: 2rem;
+  width: 2rem;
+}
+section .summary-info .summary-item .score {
+  color: rgba(48, 59, 90, 0.5);
+}
+section .summary-info .summary-item .score span {
+  color: hsl(224, 30%, 27%);
+  margin-right: 0.6rem;
+}
+section .summary .button {
+  padding: 1.7rem 2rem;
+  border: none;
+  border-radius: 50rem;
+  background: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  min-width: 100%;
+}
+section .summary .button:hover, section .summary .button:active {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  transition: background-color 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */

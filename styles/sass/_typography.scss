@@ -1,0 +1,16 @@
+@use './variables' as var;
+
+@font-face {
+	font-family: 'HankenGrotesk';
+	font-display: swap;
+	font-weight: 500, 700, 800;
+	src: url('../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf')
+		format('truetype');
+}
+
+body {
+	font-family: 'HankenGrotesk', sans-serif;
+	color: var.$dark-gray-blue;
+	font-size: 1.8rem;
+	font-weight: 500;
+}

@@ -1,0 +1,13 @@
+@mixin breakpoint($class) {
+	@if $class == sm {
+		@media only screen and (max-width: 599px) {
+			@content;
+		}
+	} @else if $class == md {
+		@media only screen and (min-width: 600px) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint mixin supports: sm, md";
+	}
+}
