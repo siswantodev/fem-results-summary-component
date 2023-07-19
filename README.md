@@ -14,8 +14,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
     - [Built with](#built-with)
   - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/results-summary-component-using-sassscss-ZvKjc-RiYj)
 - Live Site URL: (https://fem-results-summary-component8.netlify.app/)
 
 ## My process
